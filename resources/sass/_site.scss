@@ -1,0 +1,66 @@
+html, body {
+    background: rgba(244,247,246,1.0);
+    color: $--black;
+    font-family: 'Montserrat', Helvetica !important;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+
+}
+
+//table formatter
+tr , th , td  {
+    border: 1px solid black;
+    padding: 25px;
+    text-align: center;
+    margin: 10px;
+    text-align: center;
+}
+
+// cookie popup
+
+.cookie-popup{
+
+    .js-cookie-consent.cookie-consent{
+        background-color: $--puerto-rico;
+        min-height: 130px;
+        z-index: 10000;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+
+        span{
+            position: absolute;
+            line-height: 130px;
+            color: $--white;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0px;
+
+            a{
+                color: $--white;
+                text-decoration: underline;
+                letter-spacing: 0px;
+            }
+
+            button{
+                color: $--puerto-rico;
+                letter-spacing: 0px;
+                border: none;
+                border-radius: 2px;
+                min-width: 170px;
+                line-height: 65px;
+                background-color: white;
+            }
+        }
+
+        .pull-left{
+            left: 65px;
+        }
+
+        .pull-right{
+            right: 50px;
+        }
+    }
+}

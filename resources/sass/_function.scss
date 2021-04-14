@@ -1,0 +1,9 @@
+@function line-height($pt, $fontsize) {
+
+    @return $pt / $fontsize
+}
+
+@function letter-spacing($pt) {
+
+    @return calc((#{$pt} / 1000)*1em)
+}

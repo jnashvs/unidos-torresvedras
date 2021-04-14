@@ -1,0 +1,98 @@
+.header-main {
+    box-shadow: 1px 0px 40px rgb(0 0 0 / 8%);
+    background-color: $--white;
+    position: relative;
+    z-index: 10;
+
+    .header-content {
+        display: flex;
+        line-height: 80px;
+
+        @include sm(){
+            line-height: 60px;
+        }
+        
+        padding: 0px;
+
+        a:hover {
+            text-decoration: none; 
+        }
+
+        .left-content {
+            display: flex;
+
+            @include lg(){
+                .block-1{
+                    border-right: 1px solid #F2F2F2;
+                }
+            }
+            
+
+            .block-2{
+                @include max_width(930) {
+                    display: none;
+                }
+
+            }
+
+            .block-1, .block-2{
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+        .right-content,
+        .a-menu-hamburguer {
+
+            letter-spacing: 6.25px;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            color: $--black;
+            text-transform: uppercase;
+        }
+
+        .right-content {
+
+            display: flex;
+
+            span.linha-titulo {
+                margin-right: 90px;
+            }
+
+            span.linha-titulo:before {
+                content: " ";
+                position: absolute;
+                border-left: 70px solid $--quick-silver;
+                height: 2px;
+                margin-top: 38px;
+            }
+
+            .block-1, .block-2{
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            @include lg(){
+                .block-2{
+                    border-left: 1px solid #F2F2F2;
+                }
+            }
+
+            @include md(){
+                .block-2 span{
+                    display: none;
+                }
+            }
+            
+        }
+
+    }
+}
+
+
+@include max_width(930){
+    .left-content .block-2, .right-content .block-1{
+        display: none;
+    }
+}

@@ -1,0 +1,311 @@
+//section-formulario
+
+.section-formulario {
+  background-color: $--mercury;
+  min-height: 700px;
+  position: relative;
+
+  .formulario-body {
+    margin-left: 90px;
+    margin-right: 90px;
+
+    background-color: $--white;
+    box-shadow: 1px 0px 40px rgb(0 0 0 / 8%);
+    position: relative;
+    top: -100px;
+    min-height: 500px;
+    z-index: 1000;
+
+    @include max_width(1100) {
+      top: -60px;
+    }
+
+    @include sm() {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .form-status {
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      height: 130px;
+      left: 0px;
+      background-color: $--puerto-rico;
+      line-height: 130px;
+
+      span {
+        margin-left: 65px;
+        font-weight: 700;
+      }
+
+      a {
+        position: absolute;
+        right: 0px;
+        margin-right: 50px;
+        font-size: 200;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      span,
+      a {
+        font-size: 20px;
+        font-style: normal;
+        letter-spacing: 0px;
+        color: $--white;
+      }
+    }
+
+    .formulario-title {
+      margin: 0px !important;
+      height: 100px;
+      max-width: 100% !important;
+
+      @include max_width(1100) {
+        max-height: 60px;
+      }
+
+      ul.list-inline {
+        width: 100%;
+        li {
+          padding: 0px;
+          line-height: 100px;
+
+          //text css
+          color: $--log-cabin;
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 600;
+          letter-spacing: 0px;
+        }
+
+        li:hover {
+          cursor: pointer;
+        }
+
+        li.inactive_list {
+          background-color: $--puerto-rico;
+
+          span {
+            color: rgba(214, 241, 238, 1);
+          }
+        }
+
+        li.active_list {
+          span {
+            color: rgba(49, 187, 172, 1);
+          }
+        }
+
+        @include max_width(1100) {
+          display: none;
+        }
+      }
+
+      .select-mobile.d-none {
+        background-color: $--black-haze;
+        @include max_width(1100) {
+          display: block !important;
+
+          padding: 0px;
+          margin: 0px;
+          line-height: 60px;
+
+          select {
+            background-color: $--black-haze;
+            color: $--log-cabin;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            border: none;
+
+            option > span {
+              color: $--puerto-rico;
+            }
+          }
+        }
+      }
+    }
+
+    .form-row {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1120px;
+
+      .form-group {
+        margin-bottom: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        input,
+        select {
+          height: 55px;
+
+          @include sm() {
+            height: 50px;
+            color: $--silver;
+            font-size: $--font-size-xxxs;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+
+        select {
+          padding: 10px;
+        }
+
+        select {
+          width: 100%;
+        }
+
+        input,
+        textarea,
+        select {
+          border: 2px solid $--mercury;
+          border-radius: 0px;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+          border: 2px solid $--mercury !important;
+          border-radius: 0px;
+          outline: none !important;
+        }
+
+        small.campos-obrigatorios {
+          color: red;
+          @include sm() {
+            font-size: $--font-size-xxxs;
+          }
+        }
+
+        small.error-politica {
+          line-height: 64px;
+          position: absolute;
+          top: 30px;
+        }
+      }
+
+      .form-group label {
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 19px;
+
+        @include sm() {
+          font-size: $--font-size-xxs;
+          font-style: normal;
+        }
+      }
+    }
+
+    .first-row {
+      margin-top: 100px;
+      @include max_width(1100) {
+        margin-top: 50px;
+      }
+    }
+
+    //only for first row join page
+
+    .first-row.first-row-join-page {
+      margin-top: 0px;
+      padding-top: 100px;
+    }
+
+    .last-row {
+      margin-top: 48px;
+      padding-bottom: 115px;
+
+      @include max_width(1100){
+        padding-bottom: 40px;
+      }
+
+      .left-privacy-policy {
+        display: flex;
+
+        input,
+        label,
+        a {
+          min-height: 64px;
+          line-height: 64px;
+          margin-bottom: 0px;
+
+          color: $--quick-silver;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+        }
+
+        a {
+          color: $--log-cabin;
+        }
+
+        a:hover {
+          text-decoration: none;
+        }
+      }
+
+      .right-submit-button {
+        max-height: 64px;
+        margin-bottom: 0px;
+
+        a {
+          background-color: $--puerto-rico;
+          width: 160px;
+          text-align: center;
+          line-height: 64px;
+          border-radius: 0px;
+          margin-left: auto;
+          color: $--white;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+  }
+}
+
+
+
+/// custom select option
+.vue-picker{
+    width: 100%;
+}
+
+.vue-picker__opener{
+    text-align: center !important;
+    width: 100%;
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    word-break: break-word !important;
+    line-height: 25px !important;
+    font-size: 16px !important;
+}
+
+.vue-picker-option {
+    display: block !important;
+    text-align: center !important;
+    width: 100%;
+    background: none !important;
+    border: 1px solid $--black-haze !important;
+    padding: 15px !important;
+    word-break: break-word !important;
+    line-height: 25px !important;
+    font-size: 16px !important;
+}
+
+.vue-picker__dropdown {
+    border: none !important;
+    padding: 0px !important;
+}
+
+.vue-picker__opener:focus {
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}

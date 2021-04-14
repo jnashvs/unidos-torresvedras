@@ -1,0 +1,302 @@
+.homepage {
+  .banner-join-us {
+    min-height: 620px;
+    
+    @include lg(){
+      background: url("images/svg/faixas-coloridas-home.svg") no-repeat right center;
+      background-size: contain;
+    }
+
+    background-color: $--white;
+
+    .two-box-full {
+      max-width: 1040px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      min-height: 620px;
+
+      @include md(){
+        display: block;
+      }
+
+      .left-block {
+        padding-top: 100px;
+
+        @include md(){
+          padding-top: 30px;
+        }
+        
+
+
+        @include min_max_width(930, 768){
+          img{
+            max-width: 100%;
+          }
+        }
+
+        @include lg(){
+          .home-img-mobile{
+            display: none;
+          }
+
+          .home-img-desktop{
+            display: block;
+          }
+        }
+
+        @include md(){
+          .home-img-mobile{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 155px;
+          }
+
+          .home-img-desktop{
+            display: none;
+          }
+        }
+
+      }
+
+      .right-block {
+        margin-left: 150px;
+        margin-top: auto;
+        margin-bottom: auto;
+        color: $--black;        
+
+        .title{
+            max-width: calc(100% - 90px);
+        }
+
+        // right block for mobile max-768
+        @include md(){
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+
+
+        .description {
+          font-size: 45px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 65px;
+          text-align: left;
+          max-width: 545px;
+          letter-spacing: letter-spacing(0);
+
+          @include md(){
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 800;
+            letter-spacing: 0px;
+            line-height: 39px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            max-width: 320px;
+          }
+
+          span {
+            background-color: $--white;
+          }
+        }
+
+        .join-us {
+          margin-top: 45px;
+          a {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            border: 2px solid;
+            padding: 20px 80px;
+            line-height: 65px;
+            color: $--black;
+
+            @include md(){
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 500;
+              letter-spacing: 1.12px;
+              line-height: 35px;
+              padding: 20px 25px;
+            }
+          }
+          a:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      // autarquicas 2021
+      // @include md(){
+      //   .autarquicas-mobile{
+      //     display: block !important;
+      //   }
+      // }
+    }
+  }
+
+  //the moviment
+
+  .the-moviment {
+    box-shadow: 1px 0px 40px rgb(0 0 0 / 8%);
+    background-color: $--white;
+
+    .the-moviment-content {
+      max-width: 920px;
+      margin: auto;
+      padding: 140px 0px;
+
+      @include md(){
+        padding: 80px 0px;
+        max-width: 315px;
+      }
+
+      text-align: center;
+
+      .title {
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 45px;
+        color: $--puerto-rico;
+
+        @include md(){
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 700;
+          letter-spacing: 0.00px;
+          line-height: 45px;
+        }
+      }
+
+      .description {
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+        margin-top: 25px;
+        margin-bottom: 45px;
+        color: $--eerie-black;
+
+        @include md(){
+          font-size: $--font-size-xs;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+
+      .know-more {
+        // border: 2px solid #31bbac;
+        // width: 200px;
+        a {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          color: $--puerto-rico;
+          border: 2px solid $--puerto-rico;
+          padding: 20px 80px;
+          line-height: 65px;
+
+          @include md(){
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            padding: 18px 35px;
+          }
+        }
+
+        a:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // green-bg-section
+
+  .green-bg-section {
+    padding-top: 45px;
+
+    @include md(){
+      padding-top: 60px;
+      position: relative;
+    }
+
+    svg.bg-img{
+        position: absolute;
+        left: 0px;
+
+        @include md(){
+          bottom: 0px;
+          max-width: 340px;
+          height: auto;
+          left: -70px;
+        }
+    }
+
+    background-color: $--puerto-rico;
+
+    .description{
+        max-width: 870px;
+        margin: auto;
+        margin-top: 105px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 200px;
+
+        @include md(){
+          max-width: 315px;
+          margin-top: 0px;
+          padding-bottom: 160px;
+        }
+
+        h1{
+            color: $--white;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 0.00px;
+            line-height: 45px;
+
+            @include md(){
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 700;
+              letter-spacing: 0.00px;
+              line-height: 36px;
+            }
+        }
+
+        h6{
+            color: $--iceberg;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.00px;
+            line-height: 33px;
+            margin: 40px 65px 0px 65px;
+
+            @include md(){
+              margin-left: 0px;
+              margin-right: 0px;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              letter-spacing: 0.00px;
+              line-height: 29px;
+            }
+        }
+    }
+  }
+
+}
+
+.red-fine {
+  color: $--red-fine;
+}
