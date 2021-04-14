@@ -26,9 +26,4 @@ class HomeController extends Controller
     {
         return view('backoffice.home');
     }
-
-    public function testpost(Request $request)
-    {
-        dd($request->all());
-    }
 }

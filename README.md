@@ -10,6 +10,15 @@
 ## PACOTES USADOS
 
 
+## vue js select input
+
+https://vuejsexamples.com/a-native-like-select-box-in-vuejs/
+
+#EASY SVG
+
+https://github.com/blade-ui-kit/blade-icons
+
+
 ## Forms & HTML builder
 
 https://packages.bgaze.fr/bootstrap-form#quick-start

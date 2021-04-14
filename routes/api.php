@@ -30,6 +30,8 @@ Route::get('/file-types/all', 'Backoffice\FileTypesController@getAll')->name('fi
 
 Route::get('/file-types/{id}', 'Backoffice\FileTypesController@getFileType')->name('file-type-find');
 
+Route::post('/wishes/store', 'WishesController@store')->name('wishes');
+
 
 
 

@@ -21,9 +21,20 @@ try {
 
 window.axios = require('axios');
 
+//window.axios.defaults.baseURL = 'http://127.0.0.1:8000/api/';
+window.axios.defaults.baseURL = 'https://unidosportorresvedras.pt/api/';
+
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-window.axios.defaults.baseURL = 'http://127.0.0.1:8000/api/';
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

@@ -16,11 +16,8 @@ Route::group(['namespace' => 'Backoffice'], function()
     //auth routes
 
     Route::group(['middleware' => ['auth']], function () {
-        Route::get('/', 'HomeController@index')->name('home');
-    
-        Route::get('/test', function () {
-            return view('backoffice.test');
-        });
+
+        Route::get('/', 'WishesController@index')->name('home');
 
         Route::get('/files', 'FilesController@index')->name('files');
 
@@ -30,11 +27,10 @@ Route::group(['namespace' => 'Backoffice'], function()
 
         Route::get('/file-types/edit/{id?}/', 'FileTypesController@edit')->name('edit-file-types');
 
-        //Route::get('/file-types/edit', 'FileTypesController@edit')->name('create-file-types');
+        Route::get('/opinioes-list', 'WishesController@index')->name('opinioes-list');
 
-        Route::post('/testpost', 'HomeController@testpost')->name('testpost');
     });
-    
+
 });
 
 
