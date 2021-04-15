@@ -4164,7 +4164,7 @@ Vue.component('VuePickerOption', _invisiburu_vue_picker__WEBPACK_IMPORTED_MODULE
       data_nascimento: "",
       step: 1,
       step_total: 3,
-      color: '1',
+      form_type: '1',
       active_list: "inactive_list",
       items: [{
         id: 1,
@@ -4254,7 +4254,16 @@ Vue.component('VuePickerOption', _invisiburu_vue_picker__WEBPACK_IMPORTED_MODULE
       } else {
         this.setPlaceholder();
       }
-    }
+    },
+    form_type: function form_type() {
+      this.setStep(parseInt(this.form_type) || 1);
+    },
+    step: function step() {
+      this.form_type = this.step.toString(); //this.setStep(parseInt(this.form_type) || 1);
+    } // 'form.product_type': function () {
+    //     this.clearProduct();
+    // },
+
   },
   methods: {
     displaySucess: function displaySucess() {
@@ -41448,11 +41457,11 @@ var render = function() {
                   {
                     attrs: { autofocus: "" },
                     model: {
-                      value: _vm.color,
+                      value: _vm.form_type,
                       callback: function($$v) {
-                        _vm.color = $$v
+                        _vm.form_type = $$v
                       },
-                      expression: "color"
+                      expression: "form_type"
                     }
                   },
                   [
@@ -41677,7 +41686,7 @@ var render = function() {
       _c("div", { staticClass: "form-row" }, [
         _c("div", { staticClass: "form-group col-md-12" }, [
           _c("label", { attrs: { for: "inputEmail4" } }, [
-            _vm._v(_vm._s(this.joinpage ? "O que te move?" : "Mensagem"))
+            _vm._v(_vm._s(this.joinpage ? "O que a/o move?" : "Mensagem"))
           ]),
           _vm._v(" "),
           _c("textarea", {
@@ -57303,9 +57312,9 @@ try {
  */
 
 
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js"); //window.axios.defaults.baseURL = 'http://127.0.0.1:8000/api/';
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios.defaults.baseURL = 'https://unidos-tvedras.slingshotzone.com/api/'; //window.axios.defaults.baseURL = 'https://unidosportorresvedras.pt/api/';
 
-window.axios.defaults.baseURL = 'https://unidosportorresvedras.pt/api/';
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /**
  * Next we will register the CSRF Token as a common header with Axios so that

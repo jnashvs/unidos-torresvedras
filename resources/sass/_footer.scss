@@ -4,6 +4,14 @@
   position: relative;
   margin-top: -190px;
 
+  @include md(){
+    min-height: 350px;
+  }
+
+  @include lg(){
+    min-height: 400px;
+  }
+
   .footer-container {
     position: absolute;
     bottom: 45px;
@@ -11,6 +19,10 @@
 
     .footer-buttons {
       display: flex;
+
+      @include md(){
+        display: block !important;
+      }
 
       a {
         color: $--quick-silver;
@@ -28,6 +40,32 @@
         span{
             color: $--quick-silver;
         }
+
+        @include md(){
+          margin-left: auto;
+          text-align: center;
+          margin-right: auto;
+
+          a {
+              display: grid;
+                           
+          }
+
+          span.mx-2{
+            display: none;
+          }
+        }
+
+        @include sm(){
+          a {
+            color: $--quick-silver;
+            font-size: $--font-size-xxxs;
+            font-style: normal;
+            font-weight: 400;  
+            margin-top: 10px;
+          }
+        }
+
       }
 
       .right-button {
@@ -42,6 +80,28 @@
         a:hover{
             text-decoration: none;
         }
+
+        @include md(){
+          margin: auto;
+        }
+
+        @include sm(){
+          a {
+            color: $--quick-silver;
+            font-size: $--font-size-xxxs;
+            font-style: normal;
+            font-weight: 400;  
+            margin-top: 10px;
+          }
+        }
+      }
+
+      @include md(){
+        .right-button, .left-button{
+          max-width: 400px;
+          text-align: center;
+          margin-top: 30px;
+        }
       }
     }
   }
@@ -50,6 +110,12 @@
     position: absolute;
     bottom: 0px;
     width: 100%;
+
+    .colado-direito img{
+      @include md(){
+        width: 100%;
+      }
+    }
   }
 }
 

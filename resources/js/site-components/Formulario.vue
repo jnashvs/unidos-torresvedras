@@ -18,7 +18,7 @@
           </ul>
 
           <div class="form-group col-md-12 select-mobile d-none">
-            <vue-picker v-model="color" autofocus>
+            <vue-picker v-model="form_type" autofocus>
             <vue-picker-option selected value="1">O que <span class="puerto-rico-color">quero ver</span> na minha freguesia.</vue-picker-option>
             <vue-picker-option value="2">O que <span class="puerto-rico-color">não quero ver</span> na minha freguesia.</vue-picker-option>
           </vue-picker>
@@ -83,7 +83,7 @@
         <!-- text area row -->
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="inputEmail4">{{ this.joinpage ? 'O que te move?' : 'Mensagem'}}</label>
+            <label for="inputEmail4">{{ this.joinpage ? 'O que a/o move?' : 'Mensagem'}}</label>
             <textarea v-model="publico.msg" class="form-control" id="textarea-mensagem" rows="8"></textarea>
 
             <small v-if="errors" class="campos-obrigatorios">
@@ -144,7 +144,7 @@ export default {
       data_nascimento: "",
       step: 1,
       step_total: 3,
-      color: '1',
+      form_type: '1',
       active_list: "inactive_list",
       items: [
         { id: 1, titulo: "O que <span>quero ver</span> na minha freguesia." },
@@ -209,6 +209,18 @@ export default {
         this.setPlaceholder();
       }
     },
+    form_type: function () {
+        this.setStep(parseInt(this.form_type) || 1);
+    },
+
+    step: function () {
+        this.form_type = this.step.toString();
+        //this.setStep(parseInt(this.form_type) || 1);
+    },
+    
+    // 'form.product_type': function () {
+    //     this.clearProduct();
+    // },
   },
   methods: {
     displaySucess() {

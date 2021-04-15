@@ -20,9 +20,9 @@
                 </div>
             </div>
             <div class="autarquicas-mobile d-none">
-                AUTÁRQUICAS 2021
-                @svg('faixas coloridas-footer', ['class' => 'faixas coloridas-footer ml-auto'])
-
+            <span class="linha-titulo"></span>    
+            <span class="texto">AUTÁRQUICAS 2021</span>
+            <img src="images/svg/faixas coloridas-footer.svg" class="caixa-colorida" alt="">
             </div>
         </div>
 

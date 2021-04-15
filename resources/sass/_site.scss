@@ -62,5 +62,18 @@ tr , th , td  {
         .pull-right{
             right: 50px;
         }
+
+
+        // mobile css
+        @include md(){
+            min-height: 200px;
+            display: block;
+
+            span{
+                position: relative;
+                line-height: 30px;
+                font-size: 15px;
+            }
+        }
     }
 }

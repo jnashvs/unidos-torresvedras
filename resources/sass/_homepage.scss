@@ -133,11 +133,35 @@
       }
 
       // autarquicas 2021
-      // @include md(){
-      //   .autarquicas-mobile{
-      //     display: block !important;
-      //   }
-      // }
+      @include md(){
+        .autarquicas-mobile{
+          display: block !important;
+          margin-top: 10px;
+
+          .linha-titulo:before {
+            content: " ";
+            position: absolute;
+            border-left: 20px solid #a6a6a6;
+            height: 1px;
+            margin-top: 5px;
+          }
+
+          .texto{
+            position: absolute;
+            left: 30px;
+            font-size: 9px;
+            font-style: normal;
+            font-weight: 600;
+          }
+
+          img{
+            position: relative;
+            padding-top: 30px;
+            width: 100%;
+          }
+
+        }
+      }
     }
   }
 
@@ -253,7 +277,7 @@
         @include md(){
           max-width: 315px;
           margin-top: 0px;
-          padding-bottom: 160px;
+          padding-bottom: 140px;
         }
 
         h1{

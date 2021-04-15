@@ -50092,6 +50092,18 @@ readers do not read off random characters that represent icons */
   margin-top: -190px;
 }
 
+@media (max-width: 768px) {
+  .footer-content {
+    min-height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    min-height: 400px;
+  }
+}
+
 .footer-content .footer-container {
   position: absolute;
   bottom: 45px;
@@ -50100,6 +50112,12 @@ readers do not read off random characters that represent icons */
 
 .footer-content .footer-container .footer-buttons {
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .footer-content .footer-container .footer-buttons {
+    display: block !important;
+  }
 }
 
 .footer-content .footer-container .footer-buttons a {
@@ -50123,6 +50141,32 @@ readers do not read off random characters that represent icons */
   color: #a6a6a6;
 }
 
+@media (max-width: 768px) {
+  .footer-content .footer-container .footer-buttons .left-button {
+    margin-left: auto;
+    text-align: center;
+    margin-right: auto;
+  }
+
+  .footer-content .footer-container .footer-buttons .left-button a {
+    display: grid;
+  }
+
+  .footer-content .footer-container .footer-buttons .left-button span.mx-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-content .footer-container .footer-buttons .left-button a {
+    color: #a6a6a6;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+}
+
 .footer-content .footer-container .footer-buttons .right-button {
   margin-left: auto;
   margin-right: 90px;
@@ -50136,10 +50180,41 @@ readers do not read off random characters that represent icons */
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .footer-content .footer-container .footer-buttons .right-button {
+    margin: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-content .footer-container .footer-buttons .right-button a {
+    color: #a6a6a6;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content .footer-container .footer-buttons .right-button,
+  .footer-content .footer-container .footer-buttons .left-button {
+    max-width: 400px;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
 .footer-content .faixa {
   position: absolute;
   bottom: 0px;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer-content .faixa .colado-direito img {
+    width: 100%;
+  }
 }
 
 .footer-content.size-150 {
@@ -50207,6 +50282,19 @@ td {
 
 .cookie-popup .js-cookie-consent.cookie-consent .pull-right {
   right: 50px;
+}
+
+@media (max-width: 768px) {
+  .cookie-popup .js-cookie-consent.cookie-consent {
+    min-height: 200px;
+    display: block;
+  }
+
+  .cookie-popup .js-cookie-consent.cookie-consent span {
+    position: relative;
+    line-height: 30px;
+    font-size: 15px;
+  }
 }
 
 .homepage .banner-join-us {
@@ -50352,6 +50440,35 @@ td {
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .homepage .banner-join-us .two-box-full .autarquicas-mobile {
+    display: block !important;
+    margin-top: 10px;
+  }
+
+  .homepage .banner-join-us .two-box-full .autarquicas-mobile .linha-titulo:before {
+    content: " ";
+    position: absolute;
+    border-left: 20px solid #a6a6a6;
+    height: 1px;
+    margin-top: 5px;
+  }
+
+  .homepage .banner-join-us .two-box-full .autarquicas-mobile .texto {
+    position: absolute;
+    left: 30px;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .homepage .banner-join-us .two-box-full .autarquicas-mobile img {
+    position: relative;
+    padding-top: 30px;
+    width: 100%;
+  }
+}
+
 .homepage .the-moviment {
   box-shadow: 1px 0px 40px rgba(0, 0, 0, 0.08);
   background-color: white;
@@ -50469,7 +50586,7 @@ td {
   .homepage .green-bg-section .description {
     max-width: 315px;
     margin-top: 0px;
-    padding-bottom: 160px;
+    padding-bottom: 140px;
   }
 }
 
@@ -50558,9 +50675,26 @@ td {
   line-height: 130px;
 }
 
+@media (max-width: 768px) {
+  .section-formulario .formulario-body .form-status {
+    display: inline-block;
+    padding: 70px;
+    line-height: 25px;
+    text-align: center;
+    min-height: 200px;
+  }
+}
+
 .section-formulario .formulario-body .form-status span {
   margin-left: 65px;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .section-formulario .formulario-body .form-status span {
+    margin: 0px;
+    font-size: 14px !important;
+  }
 }
 
 .section-formulario .formulario-body .form-status a {
@@ -50568,6 +50702,14 @@ td {
   right: 0px;
   margin-right: 50px;
   font-size: 200;
+}
+
+@media (max-width: 768px) {
+  .section-formulario .formulario-body .form-status a {
+    position: relative;
+    margin: 0px;
+    padding-left: 10px;
+  }
 }
 
 .section-formulario .formulario-body .form-status a:hover {
@@ -50713,7 +50855,7 @@ td {
 
 @media (max-width: 576px) {
   .section-formulario .formulario-body .form-row .form-group small.campos-obrigatorios {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 
@@ -50721,6 +50863,15 @@ td {
   line-height: 64px;
   position: absolute;
   top: 30px;
+}
+
+@media (max-width: 768px) {
+  .section-formulario .formulario-body .form-row .form-group small.error-politica {
+    line-height: 20px;
+    display: block;
+    font-size: 11px;
+    top: 50px;
+  }
 }
 
 .section-formulario .formulario-body .form-row .form-group label {
@@ -50762,8 +50913,23 @@ td {
   }
 }
 
+@media (max-width: 768px) {
+  .section-formulario .formulario-body .last-row {
+    margin-top: 0px;
+  }
+}
+
 .section-formulario .formulario-body .last-row .left-privacy-policy {
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .section-formulario .formulario-body .last-row .left-privacy-policy {
+    max-width: 55%;
+    display: inline-block;
+    margin: 0px;
+    padding: 5px 15px;
+  }
 }
 
 .section-formulario .formulario-body .last-row .left-privacy-policy input,
@@ -50776,6 +50942,19 @@ td {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .section-formulario .formulario-body .last-row .left-privacy-policy input,
+  .section-formulario .formulario-body .last-row .left-privacy-policy label,
+  .section-formulario .formulario-body .last-row .left-privacy-policy a {
+    line-height: 10px;
+    min-height: auto;
+    height: auto;
+    font-size: 11px;
+    text-align: left;
+    margin: 0px !important;
+  }
 }
 
 .section-formulario .formulario-body .last-row .left-privacy-policy a {
@@ -50791,6 +50970,12 @@ td {
   margin-bottom: 0px;
 }
 
+@media (max-width: 768px) {
+  .section-formulario .formulario-body .last-row .right-submit-button {
+    max-width: 45%;
+  }
+}
+
 .section-formulario .formulario-body .last-row .right-submit-button a {
   background-color: #31bbac;
   width: 160px;
@@ -50804,19 +50989,30 @@ td {
   letter-spacing: 1.2px;
 }
 
+@media (max-width: 768px) {
+  .section-formulario .formulario-body .last-row .right-submit-button a {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 58px;
+    width: 115px;
+  }
+}
+
 .vue-picker {
   width: 100%;
 }
 
 .vue-picker__opener {
-  text-align: center !important;
+  text-align: left !important;
   width: 100%;
   background: none !important;
   border: none !important;
-  padding: 8px !important;
+  padding: 0px 15px 10px 15px !important;
   word-break: break-word !important;
   line-height: 25px !important;
   font-size: 16px !important;
+  font-weight: 600;
 }
 
 .vue-picker-option {
@@ -50840,6 +51036,10 @@ td {
   border: none !important;
   border-color: transparent !important;
   box-shadow: none !important;
+}
+
+.puerto-rico-color {
+  color: #31bbac;
 }
 
 .banner-join-us.join-us-page {

@@ -34,9 +34,23 @@
       background-color: $--puerto-rico;
       line-height: 130px;
 
+      @include md(){
+        display: inline-block;
+        padding: 70px;
+        line-height: 25px;
+        text-align: center;
+        min-height: 200px;
+      }
+
       span {
         margin-left: 65px;
         font-weight: 700;
+
+        @include md(){
+            margin: 0px;
+            font-size: 14px !important;
+        }
+
       }
 
       a {
@@ -44,6 +58,12 @@
         right: 0px;
         margin-right: 50px;
         font-size: 200;
+
+        @include md(){
+            position: relative;
+            margin: 0px;
+            padding-left: 10px;
+        }
       }
 
       a:hover {
@@ -178,7 +198,7 @@
         small.campos-obrigatorios {
           color: red;
           @include sm() {
-            font-size: $--font-size-xxxs;
+            font-size: 11px;
           }
         }
 
@@ -186,6 +206,13 @@
           line-height: 64px;
           position: absolute;
           top: 30px;
+
+          @include md(){
+            line-height: 20px;
+            display: block;
+            font-size: 11px;
+            top: 50px;
+          }
         }
       }
 
@@ -223,8 +250,19 @@
         padding-bottom: 40px;
       }
 
+      @include md(){
+        margin-top: 0px;
+      }
+
       .left-privacy-policy {
         display: flex;
+
+        @include md(){
+            max-width: 55%;
+            display: inline-block;
+            margin: 0px;
+            padding: 5px 15px;
+        }
 
         input,
         label,
@@ -237,6 +275,16 @@
           font-size: 13px;
           font-style: normal;
           font-weight: 400;
+
+          @include md(){
+            line-height: 10px;
+            min-height: auto;
+            height: auto;
+
+            font-size: 11px;
+            text-align: left;
+            margin: 0px !important;
+          }
         }
 
         a {
@@ -252,6 +300,10 @@
         max-height: 64px;
         margin-bottom: 0px;
 
+        @include md(){
+            max-width: 45%;
+        }
+
         a {
           background-color: $--puerto-rico;
           width: 160px;
@@ -263,6 +315,14 @@
           font-size: 16px;
           font-weight: 500;
           letter-spacing: 1.2px;
+
+          @include md(){
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 58px;
+            width: 115px;
+          }
         }
       }
     }
@@ -277,14 +337,15 @@
 }
 
 .vue-picker__opener{
-    text-align: center !important;
+    text-align: left !important;
     width: 100%;
     background: none !important;
     border: none !important;
-    padding: 8px !important;
+    padding: 0px 15px 10px 15px!important;
     word-break: break-word !important;
     line-height: 25px !important;
     font-size: 16px !important;
+    font-weight: 600;
 }
 
 .vue-picker-option {
@@ -308,4 +369,8 @@
     border: none !important;
     border-color: transparent !important;
     box-shadow: none !important;
+}
+
+.puerto-rico-color{
+    color: $--puerto-rico;
 }
