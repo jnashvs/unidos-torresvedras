@@ -10,7 +10,8 @@ html, body {
 
 //table formatter
 tr , th , td  {
-    border: 1px solid black;
+    border: 1px solid $--eerie-black;
+    //border: 1px solid #dee2e6;
     padding: 25px;
     text-align: center;
     margin: 10px;
@@ -52,11 +53,21 @@ tr , th , td  {
                 min-width: 170px;
                 line-height: 65px;
                 background-color: white;
+
+                @include md(){
+                    min-width: 123px;
+                    line-height: 58px;
+                    margin-top: 25px;
+                }
             }
         }
 
         .pull-left{
             left: 65px;
+
+            @include md(){
+                display: grid;
+            }
         }
 
         .pull-right{
@@ -68,12 +79,35 @@ tr , th , td  {
         @include md(){
             min-height: 200px;
             display: block;
+            padding: 40px;
 
             span{
                 position: relative;
-                line-height: 30px;
+                line-height: 25px;
                 font-size: 15px;
+
+                left: unset !important;
+                right: unset !important;
+                text-align: center;
+                margin: auto;
+                display: block;
+
             }
         }
+
+        @include min_max_width(1100, 768){
+
+            .pull-left{
+                left: 55px;
+                font-size: 14px; 
+            }
+
+            .pull-right{
+                right: 40px;
+                font-size: 14px; 
+            }
+            
+        }
+
     }
 }

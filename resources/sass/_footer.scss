@@ -1,124 +1,174 @@
 .footer-content {
-  min-height: 250px;
-  background-color: $--white;
-  position: relative;
-  margin-top: -190px;
+    min-height: 250px;
+    background-color: $--white;
+    position: relative;
+    margin-top: -190px;
 
-  @include md(){
-    min-height: 350px;
-  }
-
-  @include lg(){
-    min-height: 400px;
-  }
-
-  .footer-container {
-    position: absolute;
-    bottom: 45px;
-    width: 100%;
-
-    .footer-buttons {
-      display: flex;
-
-      @include md(){
-        display: block !important;
-      }
-
-      a {
-        color: $--quick-silver;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-        font-family: 'Montserrat', Helvetica;
-      }
-
-      a:hover{text-decoration: none;}
-
-      .left-button {
-        margin-right: auto;
-        margin-left: 90px;
-        span{
-            color: $--quick-silver;
-        }
-
-        @include md(){
-          margin-left: auto;
-          text-align: center;
-          margin-right: auto;
-
-          a {
-              display: grid;
-                           
-          }
-
-          span.mx-2{
-            display: none;
-          }
-        }
-
-        @include sm(){
-          a {
-            color: $--quick-silver;
-            font-size: $--font-size-xxxs;
-            font-style: normal;
-            font-weight: 400;  
-            margin-top: 10px;
-          }
-        }
-
-      }
-
-      .right-button {
-        margin-left: auto;
-        margin-right: 90px;
-        a {
-          span {
-            color: $--puerto-rico;
-          }
-        }
-
-        a:hover{
-            text-decoration: none;
-        }
-
-        @include md(){
-          margin: auto;
-        }
-
-        @include sm(){
-          a {
-            color: $--quick-silver;
-            font-size: $--font-size-xxxs;
-            font-style: normal;
-            font-weight: 400;  
-            margin-top: 10px;
-          }
-        }
-      }
-
-      @include md(){
-        .right-button, .left-button{
-          max-width: 400px;
-          text-align: center;
-          margin-top: 30px;
-        }
-      }
+    @include max_width(1200) {
+        min-height: 350px;
     }
-  }
 
-  .faixa{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
+    // @include lg(){
+    //   min-height: 400px;
+    // }
 
-    .colado-direito img{
-      @include md(){
+    .footer-container {
+        position: absolute;
+        bottom: 45px;
         width: 100%;
-      }
+
+        .footer-buttons {
+            display: flex;
+
+            @include max_width(1200) {
+                display: block !important;
+            }
+
+            a {
+                color: $--quick-silver;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                font-family: 'Montserrat', Helvetica;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            .left-button {
+                margin-right: auto;
+                margin-left: 90px;
+
+                span {
+                    color: $--quick-silver;
+                }
+
+                @include max_width(1200) {
+                    margin-left: auto;
+                    text-align: center;
+                    margin-right: auto;
+
+                    a {
+                        display: grid;
+                        margin-top: 10px;
+                    }
+
+                    span.mx-2 {
+                        display: none;
+                    }
+                }
+
+                @include sm() {
+                    margin-top: 0px !important;
+
+                    a {
+                        color: $--quick-silver;
+                        font-size: $--font-size-xxxs;
+                        font-style: normal;
+                        font-weight: 400;
+                        margin-top: 10px;
+                    }
+                }
+
+                @include max_width(370){
+                    a {
+                        font-size: 11px;
+                    }
+                }
+
+            }
+
+            .right-button {
+                margin-left: auto;
+                margin-right: 90px;
+
+                a {
+                    span {
+                        color: $--puerto-rico;
+                    }
+                }
+
+                a:hover {
+                    text-decoration: none;
+                }
+
+                @include max_width(1200) {
+                    margin: auto;
+                }
+
+                @include sm() {
+                    margin-bottom: -15px;
+                    margin-top: 20px !important;
+
+                    a {
+                        color: $--quick-silver;
+                        font-size: $--font-size-xxxs;
+                        font-style: normal;
+                        font-weight: 400;
+                        margin-top: 10px;
+                    }
+                }
+
+                @include max_width(370){
+                    a {
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            @include max_width(1200) {
+
+                .right-button,
+                .left-button {
+                    max-width: 400px;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+            }
+        }
     }
-  }
+
+    .faixa {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+
+        .colado-direito img {
+            @include md() {
+                width: 100%;
+            }
+        }
+    }
 }
 
-.footer-content.size-150{
+// custom footer for policy pages
+.footer-content.size-150 {
     min-height: 160px;
+
+    @include max_width(1200) {
+        min-height: 225px;
+    }
+}
+
+
+//custom footer for menu page
+
+.footer-page-menu {
+    min-height: 0px;
+    margin-top: 0px;
+
+    @include md() {
+        .menu-social-midia.d-none {
+            text-align: center;
+            display: block !important;
+            padding-bottom: 10px;
+        }
+    }
+
+    @include sm(){
+        padding-bottom: 0px;
+    }
+
+
 }

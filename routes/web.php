@@ -39,3 +39,8 @@ Route::get('/menu', function () {
 
 
 
+Route::group(['namespace' => 'Front'], function()
+{
+    Route::resource('candidatos', 'CandidatosController');
+});
+

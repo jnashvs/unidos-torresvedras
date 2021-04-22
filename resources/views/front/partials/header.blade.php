@@ -15,7 +15,11 @@
     <div class="right-content ml-auto">
         <div class="block-1" id="r-block-1"><span class="linha-titulo"></span class="autarquicas-2021"><span>AUTÁRQUICAS 2021</span></div>
         <div class="block-2">
-            <a href="" class="a-menu-hamburguer">@svg('menu') <span>menu</span></a>
+            @if(Route::currentRouteName() != "menu")
+                <a href="{{route('menu')}}" class="a-menu-hamburguer">@svg('menu') <span>menu</span></a>
+            @else
+                <a href="{{ redirect()->getUrlGenerator()->previous() }}" class="a-menu-hamburguer">@svg('menu-fechar') <span>fechar</span></a>
+            @endif
         </div>
 
     </div>

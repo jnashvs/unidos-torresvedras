@@ -21,8 +21,9 @@ try {
 
 window.axios = require('axios');
 
-window.axios.defaults.baseURL = 'https://unidos-tvedras.slingshotzone.com/api/';
+//window.axios.defaults.baseURL = 'https://unidos-tvedras.slingshotzone.com/api/';
 //window.axios.defaults.baseURL = 'https://unidosportorresvedras.pt/api/';
+window.axios.defaults.baseURL = 'http://localhost:8000/api/';
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 

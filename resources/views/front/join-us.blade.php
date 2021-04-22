@@ -1,4 +1,3 @@
-
 @extends('front.layouts.app')
 
 @section('content')
@@ -16,11 +15,11 @@
                 </div>
                 <div class="social share">
                     <span class="linha-titulo"></span> <span class="share-title">Partilhar</span>
-                    <a target="_blank" href="https://twitter.com/Unidosportv" class="social-a mx-1" >@svg('twitter', ['class' => 'icon-social twitter'])</a>
-                    <a target="_blank" href="https://www.facebook.com/Unidosportorresvedras" class="social-a mx-1" >@svg('facebook', ['class' => 'icon-social facebook'])</a>
-                    <a target="_blank" href="https://www.instagram.com/unidosportorresvedras/" class="social-a mx-1" >@svg('instagram', ['class' => 'icon-social instagram'])</a>
-                    <a target="_blank" href="" class="social-a mx-1" >@svg('youtube', ['class' => 'icon-social youtube'])</a>
-                    <a target="_blank" href="" class="social-a mx-1" >@svg('rss', ['class' => 'icon-social rss'])</a>
+                    <a target="_blank" href="https://twitter.com/Unidosportv" class="social-a mx-1">@svg('twitter', ['class' => 'icon-social twitter'])</a>
+                    <a target="_blank" href="https://www.facebook.com/Unidosportorresvedras" class="social-a mx-1">@svg('facebook', ['class' => 'icon-social facebook'])</a>
+                    <a target="_blank" href="https://www.instagram.com/unidosportorresvedras/" class="social-a mx-1">@svg('instagram', ['class' => 'icon-social instagram'])</a>
+                    <a target="_blank" href="" class="social-a mx-1">@svg('youtube', ['class' => 'icon-social youtube'])</a>
+                    <a target="_blank" href="" class="social-a mx-1">@svg('rss', ['class' => 'icon-social rss'])</a>
                 </div>
             </div>
         </div>
@@ -56,10 +55,10 @@
                         Unidos por Torres Vedras é um movimento cívico que responde à necessidade coletiva de mudança na sociedade, caracterizando-se por servir e proteger os interesses das populações do concelho. Uma ação transformadora que envolva os cidadãos, que lhes permita a participação e envolvimento, que seja transparente e inovadora na forma de estar no serviço público.
                     </p>
                     <p>
-                        Os desafios são enormes mas também muito estimulantes.  É tempo de nos unirmos, de ouvirmos quem sabe, reunir consenso e transformar. Criar uma visão de confiança, competência e credibilidade para que se possa ver, de forma planeada, o caminho a seguir. Somos um movimento aberto à participação de todos os cidadãos se queiram unir, de forma a, juntos, construirmos um futuro que é, de facto, possível!
+                        Os desafios são enormes mas também muito estimulantes. É tempo de nos unirmos, de ouvirmos quem sabe, reunir consenso e transformar. Criar uma visão de confiança, competência e credibilidade para que se possa ver, de forma planeada, o caminho a seguir. Somos um movimento aberto à participação de todos os cidadãos que queiram unir-se, de forma a, juntos, construirmos um futuro que é, de facto, possível!
                     </p>
                     <p>
-                        Hoje em vez de partidos, seguimos unidos.
+                        Hoje, em vez de partidos, seguimos unidos.
                     </p>
                 </div>
             </div>
@@ -72,13 +71,13 @@
         @svg('simbolo-verde', ['class' => 'bg-img'])
 
         <div class="description">
-            <h1>                <span id="form-refs" style="margin-top: -3px;padding-bottom: 3px;display: block;"></span>
+            <h1> <span id="form-refs" style="margin-top: -3px;padding-bottom: 3px;display: block;"></span>
 
-                Junte-se a nós. <br> Porquê?
+                Unidos somos mais fortes!
             </h1>
 
             <h6>
-                Porque Unidos participamos no futuro do nosso concelho. <br>
+                <b>Porquê?</b> Porque Unidos participamos no futuro do nosso concelho. <br>
                 A construção do programa baseia-se numa ação transformadora que integra os cidadãos, que lhes permite a participação e envolvimento, de uma maneira transparente e inovadora na forma de estar no serviço público. <br>
                 As suas ideias, ambições e projetos, vão fazer parte do futuro do concelho, integrando-se no debate que construirá em Torres Vedras um lugar melhor para todos os que aqui vivem.
             </h6>
@@ -89,7 +88,7 @@
 
     <div class="section-formulario">
 
-            <formulario-component :joinpage="1" url_politica="{{route('politica-privacidade')}}"/>
+        <formulario-component :joinpage="1" url_politica="{{route('politica-privacidade')}}" />
 
     </div>
 

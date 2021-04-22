@@ -85,7 +85,7 @@ os seguintes fundamentos de licitude:
                     </p>
 
                     <p>
-                        <table border="0">
+                        <div class="table-responsive">    <table class="table">
                             <tbody>
                             <tr>
                             <td><b>Fundamentos de Licitude </b> </td>
@@ -150,7 +150,7 @@ os seguintes fundamentos de licitude:
                                     liberdades fundamentais. </td>
                             </tr>
                             </tbody>
-                        </table>
+                        </table> </div>
                     </p>
                     <p>
                         Tendo em conta o mencionado, a recolha de dados pessoais com base nos
@@ -174,7 +174,7 @@ tratamento.
                         Dados da seguinte forma:
                     </p>
                     <p>
-                        <table border="0">
+                        <div class="table-responsive">    <table class="table">
                             <tbody>
                             <tr>
                             <td><b>Dados Pessoais </b> </td>
@@ -295,7 +295,7 @@ tratamento.
                             </tr>
 
                             </tbody>
-                        </table>
+                        </table> </div>
                     </p>
                     <br><br>
                 </div>
@@ -356,7 +356,7 @@ especificados no parágrafo 7 da presente Política.
                         Proteção de Dados e de Privacidade.
                     </p>
                     <p>
-                        <table border="0">
+                        <div class="table-responsive">    <table class="table">
                             <tbody>
                             <tr>
                             <td><b>Direitos </b> </td>
@@ -488,7 +488,7 @@ especificados no parágrafo 7 da presente Política.
                                     a Legislação de Proteção de Dados. </td>
                             </tr>
                             </tbody>
-                        </table>
+                        </table> </div>
                     </p>
                     <p>
                         Poderá a qualquer momento, por escrito, exercer os direitos consagrados na

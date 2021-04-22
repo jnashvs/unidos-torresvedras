@@ -44,12 +44,7 @@
           </div>
           <div class="form-group col-md-6">
             <label for="inputEmail4">Data nascimento (opcional)</label>
-            <input
-              type="date"
-              v-model="publico.data_nascimento"
-              class="form-control"
-              placeholder="DD/MM/AAAA"
-            />
+            <datepicker v-model="publico.data_nascimento" :language="ptBR" format="dd/MM/yyyy" name="data_nascimento" placeholder="dd/mm/yyyy"></datepicker>
             <small v-if="errors" class="campos-obrigatorios">
               <span
                 v-for="(data_nascimento, index) in errors.data_nascimento"
@@ -127,16 +122,21 @@
 import { VuePicker, VuePickerOption } from '@invisiburu/vue-picker'
 // optional css
 import '@invisiburu/vue-picker/dist/vue-picker.min.css'
-
-
 Vue.component('VuePicker', VuePicker)
 Vue.component('VuePickerOption', VuePickerOption)
+
+import Datepicker from 'vuejs-datepicker';
+import {ptBR} from 'vuejs-datepicker/dist/locale';
 
 
 export default {
   props: ["routeindex", "editid", "joinpage", "url_politica"],
+  components: {
+    Datepicker
+  },
   data: () => {
     return {
+      ptBR: ptBR,
       showPopup: false,
       isDisabled: "",
       value: "Enviar",

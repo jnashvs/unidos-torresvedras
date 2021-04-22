@@ -29,6 +29,8 @@ Route::group(['namespace' => 'Backoffice'], function()
 
         Route::get('/opinioes-list', 'WishesController@index')->name('opinioes-list');
 
+        Route::resource('candidatos', 'CandidatosController');
+
     });
 
 });

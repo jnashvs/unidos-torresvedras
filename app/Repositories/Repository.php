@@ -42,6 +42,11 @@ class Repository implements RepositoryInterface
         return $record->update($data);
     }
 
+    public function updateOrCreate(array $data)
+    {
+        return $this->model->updateOrCreate($data);
+    }
+
     // remove record from the database
     public function delete($id = null)
     {

@@ -35,7 +35,8 @@ class WishesObserver
         // O formulário " o que quero ver na minha freguesia" deve enviar para:
         // contributos@unidosportorresvedras.pt
 
-        $to_email = $wishes->tipo < 3 ? "contributos@unidosportorresvedras.pt" : "novosmembros@unidosportorresvedras.pt";
+        //$to_email = $wishes->tipo < 3 ? "contributos@unidosportorresvedras.pt" : "novosmembros@unidosportorresvedras.pt";
+        $to_email = $wishes->tipo < 3 ? "jnashvs@gmail.com" : "jorge.silva@slingshot.pt";
 
         Mail::to($to_email)->send(new WishesRegister($wishes, $tipo_descricao));
     }

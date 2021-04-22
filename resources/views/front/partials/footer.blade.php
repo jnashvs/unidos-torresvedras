@@ -1,5 +1,14 @@
 <div class="footer-container">
     <div class="footer-buttons">
+
+        {{-- this is only available for menu page page --}}
+        <div class="menu-social-midia d-none">
+            <a target="_blank" href="https://twitter.com/Unidosportv" class="social-a mx-1" >@svg('twitter', ['class' => 'icon-social twitter'])</a>
+                <a target="_blank" href="https://www.facebook.com/Unidosportorresvedras" class="social-a mx-1" >@svg('facebook', ['class' => 'icon-social facebook'])</a>
+                <a target="_blank" href="https://www.instagram.com/unidosportorresvedras/" class="social-a mx-1" >@svg('instagram', ['class' => 'icon-social instagram'])</a>
+                <a target="_blank" href="" class="social-a mx-1" >@svg('youtube', ['class' => 'icon-social youtube'])</a>
+                <a target="_blank" href="" class="social-a mx-1" >@svg('rss', ['class' => 'icon-social rss'])</a>
+        </div>
         <div class="left-button">
             <a href="{{route('politica-privacidade')}}" class="policy-privacy">Política de Proteção de Dados e Privacidade</a>
                 <span class="mx-2">&#8226;</span>
